@@ -35,8 +35,9 @@ const Wrapper = styled.div`
             border:none;
             outline:none;
         `
-        const Logo = styled.h1`
+        const Logo = styled.span`
             font-weight:bold;
+            font-size: 30px;
         `
     const Center = styled.div`
         flex:1;
@@ -44,6 +45,10 @@ const Wrapper = styled.div`
     `
     const Right = styled.div`
         flex:1;
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        gap:25px;
     `
 
     const MenuItem = styled.div`
@@ -61,11 +66,11 @@ const Navbar = () => {
                     <Language>EN</Language>
                     <SearchContainer>
                         <Input/>
-                        <Search/>
+                            <Search style={{ color: 'gray', fontSize:'16px'}}/>
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo>ROMAN.</Logo>
+                    <Logo>Wolf Wears Sheep</Logo>
                 </Center>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
@@ -78,7 +83,7 @@ const Navbar = () => {
                 </Right>
             </Wrapper>
         </Container>
-        
+
         </div>
     )
 }
