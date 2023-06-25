@@ -8,6 +8,9 @@ const Container = styled.div`
    padding: 20px;
    justify-content: space-between;
    gap:5px;
+   @media screen and (max-width:878px) {
+      flex-direction: column;
+   }
 
 `
 

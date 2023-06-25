@@ -3,21 +3,21 @@ export const sliderItems = [
       id: 1,
       img: "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=372&q=80",
       title: "Summer Sale",
-      description: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      description: "DON'T COMPROMISE ON STYLE! GET 30% OFF ON ALL NEW ARRIVALS.",
       buttonText: "Shop Now"
    },
    {
       id: 2,
       img: "https://images.unsplash.com/photo-1588117260148-b47818741c74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60",
       title: "Winter Sale",
-      description: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      description: "DON'T COMPROMISE ON STYLE! GET 30% OFF ON ALL NEW ARRIVALS.",
       buttonText: "Shop Now"
    },
    {
       id: 3,
       img: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60",
       title: "Now Trending",
-      description: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      description: "DON'T COMPROMISE ON STYLE! GET 30% OFF ON ALL NEW ARRIVALS.",
       buttonText: "Shop Now"
    },
 ]
