@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Email, Facebook, Instagram, LocalPhone, LocalPhoneOutlined, MailOutline, Pinterest, Room, RoomOutlined, Twitter } from '@mui/icons-material';
+import { mobile, tablet, desktop } from '../../responsive';
+
 const Container = styled.div`
    display: flex;
 
@@ -75,6 +77,7 @@ const ListItem = styled.li`
    border:1px solid black;
    padding:5px;
    cursor: pointer;
+   ${props=>props.type === 'noneVisible' && tablet({display:'none'})}
 
    @media screen and (max-width:412px) {
       width: 100%;
@@ -127,9 +130,9 @@ const Footer = () => {
             <List>
                <ListItem>Home</ListItem>
                <ListItem>Cart</ListItem>
-               <ListItem>Mens</ListItem>
-               <ListItem>Womens</ListItem>
-               <ListItem>Accessories</ListItem>
+               <ListItem type="noneVisible">Mens</ListItem>
+               <ListItem type="noneVisible">Womens</ListItem>
+               <ListItem type="noneVisible">Accessories</ListItem>
                <ListItem>My Account</ListItem>
                <ListItem>Order Tracking</ListItem>
                <ListItem>Wishlist</ListItem>

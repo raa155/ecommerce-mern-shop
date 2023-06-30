@@ -1,6 +1,8 @@
 import {Send} from '@mui/icons-material';
 import React from 'react';
 import styled from 'styled-components';
+import { mobile, tablet, desktop } from '../../responsive';
+
 
 const Container = styled.div`
    height: 40rem;
@@ -41,6 +43,7 @@ const InputContainer = styled.div`
    display: flex;
    justify-content: space-between;
    border: 1px solid lightgray;
+   ${mobile({width:"90%"})}
 `
 
 const Input = styled.input`

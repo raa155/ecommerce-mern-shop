@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material';
 import { sliderItems } from '../../data';
+import { mobile, tablet, desktop } from '../../responsive';
+import { Link } from 'react-router-dom';
 
 // Styled Components
 const Container = styled.div`
@@ -11,6 +13,7 @@ const Container = styled.div`
    display: flex;
    position:relative;
    overflow: hidden;
+   ${mobile({display:'none'})}
 `
 const Wrapper = styled.div`
    height:100%;
@@ -102,7 +105,7 @@ const Slider = () => {
                <InfoContainer>
                   <Title>{item.title}</Title>
                   <Description>{item.description} </Description>
-                  <Button>{item.buttonText}</Button>
+                     <Link to={`/products/${item.title}`}><Button>{item.buttonText}</Button></Link>
                </InfoContainer>
             </Slide>
             ))}

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Search, ShoppingCartOutlined} from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { mobile, tablet, desktop } from '../../responsive';
+import { Link } from 'react-router-dom';
 // Styled Components
 const Container = styled.div`
     height:60px;
@@ -24,7 +25,7 @@ const Wrapper = styled.div`
         const Language = styled.span`
             font-size:14px;
             cursor:pointer;
-            ${mobile({display:'none'})}
+            ${tablet({ display: 'none' })}
         `
         const SearchContainer = styled.div`
             display:flex;
@@ -32,22 +33,26 @@ const Wrapper = styled.div`
             border:0.5px solid lightgray;
             margin-left:25px;
             padding:5px;
-            ${mobile({display:'none'})}
+            ${mobile({ display: 'none' })}
+            ${tablet({ marginLeft: '0px' })}
 
         `
         const Input = styled.input`
             border:none;
             outline:none;
-            ${mobile({width:'50px'})}
+            ${tablet({width:'100px'})}
         `
         const Logo = styled.span`
             font-weight:bold;
             font-size: 30px;
+            ${tablet({fontSize:'18px'})}
             ${mobile({fontSize:'14px'})}
         `
     const Center = styled.div`
         flex:1;
         text-align:center;
+        ${mobile({ textAlign: 'left', marginLeft: '20px' })}
+        ${tablet({flex:'1'})}
     `
     const Right = styled.div`
         flex:1;
@@ -78,14 +83,14 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo>Wolf Wears Sheep</Logo>
+                    <Logo><Link className="link" to="/">Wolf Wears Sheep</Link></Logo>
                 </Center>
                 <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem><Link className="link" to="/register">REGISTER</Link></MenuItem>
+                    <MenuItem><Link className="link" to="/login">SIGN IN</Link></MenuItem>
                     <MenuItem>
                         <Badge badgeContent={4} color='primary'>
-                            <ShoppingCartOutlined/>
+                            <Link className="link" to="/cart"><ShoppingCartOutlined/></Link>
                         </Badge>
                     </MenuItem>
                 </Right>

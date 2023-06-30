@@ -2,15 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { categories } from '../../data';
 import CategoryItem from '../CategoryItem/CategoryItem';
+import { mobile, tablet, desktop } from '../../responsive';
 
 const Container = styled.div`
    display: flex;
    padding: 20px;
    justify-content: space-between;
    gap:5px;
-   @media screen and (max-width:878px) {
-      flex-direction: column;
-   }
+   ${mobile({flexDirection:'column'})}
 
 `
 

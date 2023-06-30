@@ -5,14 +5,15 @@ import Navbar from '../../components/Navbar/Navbar';
 import Announcement from '../../components/Announcement/Announcement';
 import Footer from '../../components/Footer/Footer';
 import { Add, Remove } from '@mui/icons-material';
+import { mobile, tablet, desktop } from '../../responsive';
 
 
-const Container =  styled.div`
 
-`
+const Container =  styled.div``
 
 const Wrapper = styled.div`
    padding:20px;
+   ${mobile({padding:'10px'})}
 `
 const Title = styled.h1`
    font-weight: 300;
@@ -23,6 +24,7 @@ const Top = styled.div`
    align-items: center;
    justify-content: space-between;
    padding: 20px;
+   ${mobile({display:'none'})}
 `
 const TopButton = styled.button`
    padding: 10px;
@@ -32,8 +34,11 @@ const TopButton = styled.button`
    background-color: ${props => props.type === 'filled' ? 'black' : "transparent"};
    color: ${props => props.type === 'filled' && 'white'};
 
+
+
 `
 const TopTexts = styled.div`
+   ${tablet({ display: 'flex', flexDirection: 'column', gap: '10px' })}
 
 `
 const TopText = styled.span`
@@ -44,6 +49,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
    display: flex;
    justify-content: space-between;
+   ${tablet({flexDirection:'column'})}
 `
 const Info = styled.div`
    flex:3;
@@ -52,13 +58,16 @@ const Product = styled.div`
    display: flex;
    justify-content: space-between;
    padding: 10px;
+   ${tablet({flexDirection:'column'})}
 `
 const ProductDetail = styled.div`
    flex:2;
    display: flex;
+   ${tablet({flexDirection:'column', alignItems:'center'})}
 `
 const Image = styled.img`
    width: 200px;
+   ${tablet({width:'80%'})}
 `
 const Details = styled.div`
    padding: 20px;
@@ -90,11 +99,13 @@ const PriceDetail = styled.div`
    align-items: center;
    justify-content: center;
    gap:20px;
+   ${tablet({flexDirection:'row'})}
 `
 const ProductAmountContainer = styled.div`
    display: flex;
    align-items: center;
    gap:10px;
+   ${tablet({gap:'20px', margin:'20px'})}
 `
 const ProductAmount = styled.div`
    font-size: 24px;
@@ -106,6 +117,7 @@ const ProductPrice = styled.div`
    padding: 8px;
    color:#3d3d3d;
    border-radius: 1rem;
+
 `
 const Hr = styled.hr`
    background-color: #eee;
@@ -122,6 +134,7 @@ const Summary = styled.div`
    display: flex;
    flex-direction: column;
    gap:30px;
+   ${desktop({ height:'30vh'})}
 `
 const SummaryTitle = styled.h1`
    font-weight: 200;
@@ -151,8 +164,6 @@ const SummaryButton = styled.button`
 const Cart = () => {
    return (
       <Container>
-         <Navbar />
-         <Announcement />
          <Wrapper>
             <Title>Your Shopping Cart</Title>
             <Top>
@@ -227,7 +238,6 @@ const Cart = () => {
                </Summary>
             </Bottom>
          </Wrapper>
-         <Footer/>
       </Container>
    )
 }

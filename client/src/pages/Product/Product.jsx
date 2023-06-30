@@ -5,26 +5,32 @@ import Announcement from '../../components/Announcement/Announcement';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import Footer from '../../components/Footer/Footer';
 import { Add, Remove } from '@mui/icons-material';
+import { mobile, tablet, desktop } from '../../responsive';
+
 const Container = styled.div`
 
 `
 const Wrapper = styled.div`
    padding:50px;
    display:flex;
+   ${tablet({padding:'10px',flexDirection:'column'})}
 `
 
 const ImgContainer = styled.div`
    flex:1;
+   ${tablet({marginBottom:'1rem'})}
 `
 const Image = styled.img`
    width:100%;
    height:40rem;
    object-fit: cover;
+   ${tablet({height:'20rem'})}
 
 `
 const InfoContainer = styled.div`
    flex:1;
    padding:0px 50px;
+   ${tablet({padding:'10px'})}
 `
 const Title = styled.h1`
    font-weight: 200;
@@ -43,6 +49,7 @@ const FilterContainer = styled.div`
    width:50%;
    margin:30px 0;
    justify-content: space-between;
+   ${tablet({width:'100%'})}
 `
 const Filter = styled.div`
    display: flex;
@@ -78,13 +85,13 @@ const AddContainer = styled.div`
    align-content: center;
    justify-content: space-between;
    width: 50%;
+   ${tablet({width:'100%'})}
 `
 const AmountContainer = styled.div`
    display: flex;
    align-items: center;
    font-weight: 700;
    gap:5px;
-
 `
 const Amount = styled.span`
    width: 30px;
@@ -109,8 +116,6 @@ const Button  = styled.button`
 const Product = () => {
    return (
       <Container>
-         <Navbar />
-         <Announcement />
          <Wrapper>
             <ImgContainer>
                <Image src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=726&q=80"/>
@@ -148,7 +153,6 @@ const Product = () => {
             </InfoContainer>
          </Wrapper>
          <Newsletter />
-         <Footer />
       </Container>
    )
 }

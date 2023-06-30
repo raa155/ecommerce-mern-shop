@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mobile, tablet, desktop } from '../../responsive';
+import { Link } from 'react-router-dom';
+
 
 const Container = styled.div`
    flex:1;
@@ -11,6 +14,7 @@ const Image = styled.img`
    height:100%;
    object-fit: cover;
    object-position: center;
+   ${mobile({height:'30vh', objectPosition:'50% 30%'})}
 `
 const Info = styled.div`
    position:absolute;
@@ -43,7 +47,7 @@ const CategoryItem = ({item}) => {
          <Image src={item.img} />
          <Info>
             <Title>{item.title}</Title>
-            <Button>{item.buttonText}</Button>
+            <Link to={`/products/${item.title}`}><Button>{item.buttonText}</Button></Link>
          </Info>
       </Container>
    )

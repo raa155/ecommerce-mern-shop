@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 const Container = styled.div`
    flex:1;
    min-width: 280px;
@@ -74,7 +75,7 @@ const Product = ({item}) => {
                <ShoppingCartOutlined/>
             </Icon>
             <Icon>
-               <SearchOutlined/>
+               <Link className="link" to={`/product/1`}><SearchOutlined/></Link>
             </Icon>
             <Icon>
                <FavoriteBorderOutlined/>

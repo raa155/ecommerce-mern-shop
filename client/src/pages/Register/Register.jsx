@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { mobile, tablet, desktop } from '../../responsive';
 
 const Container = styled.div`
    width:100vw;
@@ -14,6 +15,7 @@ const Wrapper = styled.div`
    width:40%;
    padding: 20px;
    background-color: white;
+   ${tablet({width:'70%'})}
 `
 const Title = styled.h1`
    font-size: 24px;
@@ -29,6 +31,7 @@ const Input = styled.input`
    min-width:40%;
    margin:20px 10px 0px 0px;
    padding:10px;
+   outline:none;
 `
 const Agreement = styled.p`
    font-size: 12px;
@@ -52,10 +55,10 @@ const Register = () => {
             <Form>
                <Input placeholder="First Name" />
                <Input placeholder="Last Name" />
-               <Input placeholder="Email" />
+               <Input placeholder="Email" type="email" />
                <Input placeholder="Username" />
-               <Input placeholder="Password" />
-               <Input placeholder="Confirm Password" />
+               <Input placeholder="Password" type="password" />
+               <Input placeholder="Confirm Password" type="password" />
                <Agreement>By creating an account, I consent to the processing of my personal data in accordance with the <b>Privacy Policy</b></Agreement>
                <Button>Register</Button>
             </Form>
